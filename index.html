@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Juan José Gómez</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script> <!-- JS añadido -->
+</head>
+<body>
+
+    <!-- Header con un fondo elegante y minimalista -->
+    <header class="main-header">
+        <h1>Portafolio Juan José Gómez</h1>
+        <p>Ingeniero Multimedia | Desarrollador Frontend | Creativo</p>
+    </header>
+
+    <!-- Sección de descripción -->
+    <section class="about-me">
+        <h2>Sobre Mí</h2>
+        <p>
+            Soy Juan José Gómez, estudiante de ingeniería multimedia, apasionado por el diseño interactivo y el desarrollo frontend. 
+            Con experiencia en lenguajes como Python, CSS, y en herramientas como la Suite de Adobe, mi enfoque es siempre ofrecer 
+            soluciones innovadoras y funcionales.
+        </p>
+    </section>
+
+    <!-- Slider de Trabajos con JavaScript -->
+    <section class="my-projects">
+        <h2>Mis Proyectos</h2>
+        <div class="slider">
+            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+            <div class="slides">
+                <div class="slide">
+                    <h3>Trabajo 1</h3>
+                    <p>Tarea #1</p>
+                    <a href="https://github.com/Juancho5023/Tarea1.git" class="btn">Ver Proyecto</a>
+                </div>
+                <div class="slide">
+                    <h3>Responsive</h3>
+                    <p>Pagina Web Responsiver (max-width/min-width)</p>
+                    <a href="https://github.com/Juancho5023/responsive.git" class="btn">Ver Proyecto</a>
+                </div>
+                <div class="slide">
+                    <h3>Practica Js-2</h3>
+                    <p>Practica básica de Java script</script></p>
+                    <a href="https://github.com/Juancho5023/Javascript-2.git" class="btn">Ver Proyecto</a>
+                </div>
+            </div>
+            <button class="next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+    </section>
+
+      <!-- Habilidades con iconos y animaciones -->
+      <section class="skills">
+        <h2>Habilidades</h2>
+        <div class="skills-container">
+            <div class="skill">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python">
+                <p>Manejo de Python</p>
+            </div>
+            <div class="skill">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="CSS">
+                <p>Manejo de CSS</p>
+            </div>
+            <div class="skill">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/1d/Creative_Cloud.svg" alt="Adobe Suite">
+                <p>Suite de Adobe</p>
+            </div>
+            <div class="skill">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Git-logo.svg" alt="Compilación">
+                <p>Front-end y Compilación</p>
+            </div>
+        </div>
+      </section>
+    <!-- Sección Git Ignore -->
+    <section class="gitignore">
+        <h2>Git Ignore</h2>
+        <pre>
+touch .gitignore
+# Imágenes
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.svg
+        </pre>
+    </section>
+
+    <!-- Footer con redes sociales -->
+    <footer>
+        <p>Contáctame</p>
+        <div class="social-links">
+            <a href="https://www.instagram.com/tu_usuario_instagram" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+            </a>
+            <a href="https://github.com/tu_usuario_github" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub">
+            </a>
+            <a href="https://www.facebook.com/tu_usuario_facebook" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+            </a>
+        </div>
+        <p>Teléfono: +123 456 7890</p>
+    </footer>
+
+</body>
+</html>
