@@ -76,15 +76,34 @@
     <!-- Sección Git Ignore -->
     <section class="gitignore">
         <h2>Git Ignore</h2>
-        <pre>
-touch .gitignore
-# Imágenes
-*.jpg
-*.jpeg
-*.png
-*.gif
-*.svg
-        </pre>
+        <p>Paso 1: Crea o modifica el archivo .gitignore en la raíz de tu proyecto:</p>
+        <code>touch .gitignore</code>
+        <p>Paso 2: Abre el archivo en tu editor preferido, como:</p>
+        <code>nano .gitignore</code>
+        <p>Añade reglas para evitar seguimiento de archivos como imágenes o videos:</p>
+        <code>
+            # Imágenes<br>
+            *.jpg<br>
+            *.jpeg<br>
+            *.png<br>
+            *.gif<br>
+            *.svg<br><br>
+            # Videos<br>
+            *.mp4<br>
+            *.avi<br>
+            *.mov<br>
+            *.mkv<br><br>
+            # Audios<br>
+            *.mp3<br>
+            *.wav<br>
+            *.flac<br>
+        </code>
+        <p>Paso 3: Asegúrate de que Git ignore estos archivos no agregados. Si ya fueron añadidos, elimínalos del seguimiento sin borrarlos del sistema:</p>
+        <code>git rm --cached *.jpg</code><br>
+        <code>git rm --cached *.mp3</code><br>
+        <p>Paso 4: Confirma los cambios y prueba que el .gitignore funcione correctamente:</p>
+        <code>git add .gitignore</code><br>
+        <code>git commit -m "Ignorar archivos de imágenes y videos"</code>
     </section>
 
     <!-- Footer con redes sociales -->
