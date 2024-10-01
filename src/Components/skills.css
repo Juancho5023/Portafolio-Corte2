@@ -1,0 +1,35 @@
+/* Habilidades */
+.skills {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.skill {
+    width: 150px;
+    padding: 20px;
+    background-color: #1a1a1a;
+    margin: 10px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.skill:hover {
+    transform: translateY(-10px);
+}
+
+.skill img {
+    width: 50px;
+    height: 50px;
+}
+
+.skill p {
+    margin-top: 10px;
+    color: #bbb;
+}

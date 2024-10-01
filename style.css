@@ -174,3 +174,385 @@ footer p {
     margin-top: 10px;
     color: #bbb;
 }
+/* Estilos generales del footer */
+footer {
+    background-color: #1a1a1a; /* Color oscuro de fondo */
+    padding: 40px 0;
+    text-align: center;
+    color: #bbb;
+    box-shadow: 0 -8px 15px rgba(0, 0, 0, 0.2); /* Sombras para darle profundidad */
+    border-top: 1px solid #333; /* Línea sutil en la parte superior */
+    margin-top: 50px;
+}
+
+/* Estilos de los enlaces a redes sociales */
+.social-links {
+    margin-bottom: 20px;
+}
+
+.social-links a {
+    margin: 0 15px;
+    display: inline-block;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Efecto de hover en los íconos */
+.social-links a:hover {
+    transform: translateY(-10px); /* Efecto de elevar el ícono */
+    filter: drop-shadow(0 4px 6px rgba(255, 255, 255, 0.2)); /* Sombra ligera en hover */
+}
+
+.social-links img {
+    width: 40px;
+    height: 40px;
+    filter: grayscale(100%); /* Convertir íconos a escala de grises */
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.social-links img:hover {
+    filter: grayscale(0); /* Restablecer colores en hover */
+}
+
+/* Texto en el footer */
+footer p {
+    margin-top: 20px;
+    font-size: 1.1em;
+    color: #888; /* Color más claro para el texto */
+    transition: color 0.3s ease;
+}
+
+footer p:hover {
+    color: #fff; /* Cambiar a blanco al pasar el mouse */
+}
+
+/* Hacer que el footer sea completamente responsivo */
+@media (max-width: 768px) {
+    footer {
+        padding: 20px 0;
+    }
+
+    .social-links a {
+        margin: 0 10px;
+    }
+
+    .social-links img {
+        width: 30px;
+        height: 30px;
+    }
+}
+/* Animación de aparición del footer */
+footer {
+    animation: fadeInFooter 1s ease-in-out;
+}
+
+/* Definimos la animación para el footer */
+@keyframes fadeInFooter {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Slider contenedor */
+.slider {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 15px;
+    background-color: #222;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Agregar sombra para darle profundidad */
+}
+
+/* Contenedor de las slides */
+.slides {
+    display: flex;
+    transition: transform 0.7s ease-in-out; /* Transición más suave entre slides */
+    animation: autoSlide 12s infinite; /* Animación automática del slider */
+}
+
+/* Cada slide */
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 40px;
+    text-align: center;
+    background-color: #1a1a1a;
+    color: #fff;
+    transition: transform 0.4s ease, opacity 0.4s ease; /* Animaciones en hover */
+    opacity: 0.8;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombras dentro de cada slide */
+}
+
+.slide:hover {
+    opacity: 1; /* Aumentar la visibilidad cuando se hace hover */
+    transform: scale(1.05); /* Agrandar ligeramente el slide en hover */
+}
+
+/* Contenido dentro de cada slide */
+.slide h3 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.slide p {
+    font-size: 1.2em;
+    color: #bbb;
+}
+
+/* Botón dentro de cada slide */
+.slide .btn {
+    display: inline-block;
+    padding: 12px 25px;
+    margin-top: 20px;
+    background-color: #444;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.slide .btn:hover {
+    background-color: #666; /* Cambiar el color del botón en hover */
+    transform: translateY(-5px); /* Elevar ligeramente el botón al hacer hover */
+}
+
+/* Botones de control (anterior/siguiente) */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 2em;
+    z-index: 1;
+    transition: background-color 0.3s ease;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Hacer que el botón se oscurezca al pasar el mouse */
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Indicadores del slider */
+.indicators {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.indicator {
+    width: 15px;
+    height: 15px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.indicator.active {
+    background-color: #fff; /* Color del indicador activo */
+}
+
+/* Animación automática del slider */
+@keyframes autoSlide {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-100%); }
+    50% { transform: translateX(-200%); }
+    75% { transform: translateX(-300%); }
+    100% { transform: translateX(0); }
+}
+/* Header principal */
+.main-header {
+    text-align: center;
+    padding: 60px;
+    background: linear-gradient(135deg, #1e3a8a, #0f172a); /* Fondo con degradado azul */
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Sombra para darle profundidad */
+    position: relative; /* Necesario para agregar efectos visuales adicionales */
+    overflow: hidden; /* Ocultar cualquier elemento que salga del contenedor */
+    color: white; /* Texto blanco para contraste */
+}
+
+/* Título principal del header */
+.main-header h1 {
+    font-size: 3.5em;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    animation: textGlow 2s ease-in-out infinite alternate; /* Efecto de brillo en el texto */
+}
+
+/* Subtítulo */
+.main-header p {
+    font-size: 1.5em;
+    color: #e2e8f0;
+    margin-top: 10px;
+}
+
+/* Efecto de partículas o burbujas flotantes */
+.bubble {
+    position: absolute;
+    bottom: -50px;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    animation: float 6s ease-in-out infinite;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+}
+
+.bubble:nth-child(2) {
+    width: 70px;
+    height: 70px;
+    left: 20%;
+    animation-duration: 8s;
+}
+
+.bubble:nth-child(3) {
+    width: 100px;
+    height: 100px;
+    left: 40%;
+    animation-duration: 10s;
+}
+
+.bubble:nth-child(4) {
+    width: 60px;
+    height: 60px;
+    left: 60%;
+    animation-duration: 7s;
+}
+
+.bubble:nth-child(5) {
+    width: 80px;
+    height: 80px;
+    left: 80%;
+    animation-duration: 9s;
+}
+
+/* Animación de las burbujas flotando */
+@keyframes float {
+    0% {
+        transform: translateY(0);
+        opacity: 0.5;
+    }
+    50% {
+        transform: translateY(-200px);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 0.5;
+    }
+}
+
+/* Efecto de brillo en el texto */
+@keyframes textGlow {
+    0% {
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 0 0 10px rgba(255, 255, 255, 0.3);
+    }
+    100% {
+        text-shadow: 0 0 20px rgba(255, 255, 255, 0.9), 0 0 30px rgba(255, 255, 255, 0.5);
+    }
+}
+/* Estilos para la sección del Git Ignore */
+.gitignore {
+    background-color: #1e293b; /* Un azul oscuro para el fondo */
+    padding: 20px;
+    margin: 40px 0;
+    border-radius: 10px;
+    transition: background-color 0.5s ease;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra suave */
+    position: relative; /* Necesario para las animaciones */
+    overflow: hidden;
+}
+
+/* Efecto de resaltar las líneas del código */
+.gitignore:hover {
+    background-color: #334155; /* Cambia el fondo en hover */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* Animación suave de aparición */
+.gitignore-code {
+    opacity: 0;
+    animation: fadeIn 1.5s forwards;
+    color: #e2e8f0;
+    font-family: 'Courier New', monospace;
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+/* Aparece lentamente con una ligera opacidad */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Empieza un poco más abajo */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Se coloca en su lugar */
+    }
+}
+
+/* Resaltado de diferentes partes del .gitignore */
+.gitignore-code .comment {
+    color: #94a3b8; /* Comentarios en gris claro */
+    font-style: italic;
+}
+
+.gitignore-code .directory {
+    color: #38bdf8; /* Directorios en azul claro */
+}
+
+.gitignore-code .file {
+    color: #fbbf24; /* Archivos ignorados en amarillo */
+}
+
+/* Burbuja animada para efecto visual en el fondo */
+.bubble-git {
+    position: absolute;
+    bottom: -50px;
+    right: -50px;
+    width: 150px;
+    height: 150px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    animation: floatBubble 10s ease-in-out infinite;
+}
+
+/* Animación de burbuja flotante */
+@keyframes floatBubble {
+    0% {
+        transform: translateY(0);
+        opacity: 0.5;
+    }
+    50% {
+        transform: translateY(-100px);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 0.5;
+    }
+}

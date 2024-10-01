@@ -40,3 +40,33 @@
 .read-the-docs {
   color: #888;
 }
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos generales */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #121212;
+  color: #fff;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* Estilos globales para botones */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 10px;
+  background-color: #444;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background-color: #666;
+}
